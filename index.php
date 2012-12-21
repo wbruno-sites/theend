@@ -4,6 +4,20 @@
 	<meta charset="UTF-8">
 	<title>Fim do Mundo - The End of the World</title>
 
+
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="description" content="O mundo ainda pode acabar!!(ainda dá tempo)." />
+	
+	<meta property="og:title" content="Fim do Mundo - The End of the World" />
+	<meta property="og:type" content="activity" />
+	<meta property="og:url" content="http://theendoftheworld.com.br/" />
+	<meta property="og:image" content="http://theendoftheworld.com.br/lua.png" />
+	<meta property="og:description" content="O mundo ainda pode acabar!!(ainda dá tempo)." />
+
+
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="canonical" href="http://theendoftheworld.com.br/" />
+
 	<style type="text/css">
 		* { margin: 0; padding: 0; border: none; }
 		html, body { height: 100%; }
@@ -26,7 +40,7 @@
 		}
 
 		body { background: url('bg-body.jpg') center no-repeat #1D0600; }
-		#article { height: 100%; background: url('bg-article.png') center top no-repeat; }
+		#article { height: 1046px; background: url('bg-article.png') center top no-repeat; }
 		#article-title {
 			width: 488px; height: 142px;
 			position: absolute;
@@ -68,7 +82,8 @@
 			<p id="article-date"><?php echo date('d/m/Y'); ?></p>
 		</div>
 
-		<a href="https://github.com/wbruno/theend" id="fork-me"><img src="fork-me.png" alt="Fork me on GitHub" /></a>
+		<a href="https://github.com/wbruno/theend" id="fork-me" target="_blank">
+			<img src="fork-me.png" alt="Fork me on GitHub" width="149" height="149" /></a>
 	</article>
 
 
