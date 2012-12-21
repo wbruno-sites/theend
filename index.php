@@ -46,6 +46,7 @@
 			top: 484px;
 			text-align: center;
 		}
+		#fork-me { position: absolute; top: 0; right: 0; }
 	</style>
 	<script type="text/javascript" src="all.js"></script>
 </head>
@@ -66,6 +67,8 @@
 
 			<p id="article-date"><?php echo date('d/m/Y'); ?></p>
 		</div>
+
+		<a href="https://github.com/wbruno/theend" id="fork-me"><img src="fork-me.png" alt="Fork me on GitHub" /></a>
 	</article>
 
 
