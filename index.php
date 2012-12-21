@@ -51,15 +51,25 @@
 		#article-title span { background: url('article-title.png'); }
 
 		p { font-family: 'digital-7regular'; }
-		#article-clock { font-size: 45px; }
-		#article-date { font-size: 25px; }
+		#article-clock { font-size: 45px; color: #dacc6d; }
+		#article-date { font-size: 25px; color: #FFF; }
 		#wrap-article-clock {
 			position: absolute;
 			left: 50%;
-			margin-left: -84px; 
-			top: 484px;
-			text-align: center;
+			margin-left: -375px; 
+			top: 195px;
+			background: url('time.png') left top no-repeat;
+			width: 375px; height: 369px;
+			padding: 262px 0 0 292px;
 		}
+		#wrap-article-clock p { width: 175px; text-align: center; }
+
+		.article-cloud { position: absolute; }
+		#cloud-left-bottom { top: 160px; }
+		#cloud-left-top { top: 270px; }
+		#cloud-right-bottom { top: 200px; right: 0; }
+		#cloud-right-top { top: 120px; right: 0; }
+
 		#fork-me { position: absolute; top: 0; right: 0; }
 	</style>
 	<script type="text/javascript" src="all.js"></script>
@@ -67,6 +77,9 @@
 <body>
 	<article id="article" class="content">
 		<h1 id="article-title" class="replacement">O mundo ainda pode acabar:<span></span></h1>
+
+		<img id="cloud-left-bottom" class="article-cloud" src="cloud-left-bottom.png" alt="">
+		<img id="cloud-left-top" class="article-cloud" src="cloud-left-top.png" alt="">
 
 		<div id="wrap-article-clock">
 <?php 
@@ -81,6 +94,9 @@
 
 			<p id="article-date"><?php echo date('d/m/Y'); ?></p>
 		</div>
+
+		<img id="cloud-right-bottom" class="article-cloud" src="cloud-right-bottom.png" alt="">
+		<img id="cloud-right-top" class="article-cloud" src="cloud-right-top.png" alt="">
 
 		<a href="https://github.com/wbruno/theend" id="fork-me" target="_blank">
 			<img src="fork-me.png" alt="Fork me on GitHub" width="149" height="149" /></a>
