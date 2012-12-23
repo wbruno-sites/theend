@@ -19,9 +19,6 @@
 	<link rel="canonical" href="http://theendoftheworld.com.br/" />
 
 	<style type="text/css">
-		* { margin: 0; padding: 0; border: none; }
-		html, body { height: 100%; }
-
 		@font-face {
 		    font-family: 'digital-7regular';
 		    src: url('digital-7-webfont.eot');
@@ -31,6 +28,10 @@
 		    font-weight: normal;
 		    font-style: normal;
 		}
+
+		* { margin: 0; padding: 0; border: none; }
+		html, body { height: 100%; }
+		body { font: 12px Tahoma, sans-serif; color: #1d0600; }
 
 		.content { margin: 0 auto; }
 		.replacement span {
@@ -46,9 +47,9 @@
 			position: absolute;
 			left: 50%; margin-left: -244px; 
 			top: 42px;
-			text-indent: -999px;
+			font-size: 60px;
+			line-height: 1.1em;
 		}
-		#article-title span { background: url('article-title.png'); }
 
 		p { font-family: 'digital-7regular'; }
 		#article-clock { font-size: 45px; color: #dacc6d; }
@@ -76,7 +77,7 @@
 </head>
 <body>
 	<article id="article" class="content">
-		<h1 id="article-title" class="replacement">O mundo ainda pode acabar:<span></span></h1>
+		<h1 id="article-title">O mundo ainda pode acabar:</h1>
 
 		<img id="cloud-left-bottom" class="article-cloud" src="cloud-left-bottom.png" alt="">
 		<img id="cloud-left-top" class="article-cloud" src="cloud-left-top.png" alt="">
@@ -84,14 +85,18 @@
 		<div id="wrap-article-clock">
 <?php 
 	date_default_timezone_set ('America/Sao_Paulo');
-	$t = 1356141599 - time();
+	function pad_time($t){
+		return str_pad($t, 2, '0', STR_PAD_LEFT);
+	}
 ?>
+
 			<p id="article-clock">
-				<span id="clock-hour">0<?php echo (23 - date( 'H' )); ?></span>:
-				<span id="clock-minute"><?php echo date( 'i', $t ); ?></span>:
-				<span id="clock-second"><?php echo date( 's', $t ); ?></span>
+				<span id="clock-hour"><?php echo pad_time(23 - date( 'H' )); ?></span>:
+				<span id="clock-minute"><?php echo pad_time(59 - date( 'i' )); ?></span>:
+				<span id="clock-second"><?php echo pad_time(59 - date( 's' )); ?></span>
 			</p>
 
+<?php echo date('H:i:s'); ?>
 			<p id="article-date"><?php echo date('d/m/Y'); ?></p>
 		</div>
 
